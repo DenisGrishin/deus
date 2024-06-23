@@ -313,7 +313,7 @@ body.popup-show::after {
 @media (max-width: 47.99875em) {
   .btn {
     font-size: 0.875rem;
-    padding: 13px 0;
+    padding: 0.8125rem 1.375rem;
   }
 }
 
@@ -1311,7 +1311,7 @@ body.popup-show::after {
 }
 .name-products-sl__pagging span.swiper-pagination-bullet-active::before {
   content: "";
-  background: url("../img/icons/actv-bullet-slider.svg") top 0 left 0px/7px 12px no-repeat;
+  background: url("../img/icons/actv-bullet-slider.webp") top 0 left 0px/7px 12px no-repeat;
   position: absolute;
   width: 7px;
   height: 12px;
