@@ -1637,6 +1637,12 @@ body.popup-show::after {
   padding-top: 7.5rem;
   padding-bottom: 6.25rem;
 }
+@media (max-width: 63.99875em) {
+  .play-project {
+    padding-bottom: 3.75rem;
+    padding-top: 3.75rem;
+  }
+}
 .play-project__title {
   margin-bottom: 3.8125rem;
 }
@@ -1681,6 +1687,11 @@ body.popup-show::after {
 @media (max-width: 63.99875em) {
   .play-project__items {
     row-gap: 4.0625rem;
+  }
+}
+@media (max-width: 63.99875em) {
+  .play-project__items {
+    margin-bottom: 3.125rem;
   }
 }
 @media (max-width: 63.99875em) and (min-width: 63.99875em) {
