@@ -290,7 +290,7 @@ body.popup-show::after {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1;
-  padding: 20px 0;
+  padding: 1.25rem 1.875rem;
   background-color: #fff;
   border-radius: 10px;
   position: relative;
@@ -1155,9 +1155,14 @@ body.popup-show::after {
 }
 @media (max-width: 63.99875em) {
   .main-slider__nav {
-    top: 230px;
+    top: 220px;
     left: 50%;
     transform: translate(-50%, 0px);
+  }
+}
+@media (max-width: 47.99875em) {
+  .main-slider__nav {
+    top: 210px;
   }
 }
 .main-slider__wrapper-nav-btn {
