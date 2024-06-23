@@ -4478,10 +4478,9 @@
           observeParents: !0,
           slidesPerView: 1,
           spaceBetween: 21,
-          autoHeight: !1,
           speed: 400,
           breakpoints: {
-            320: { slidesPerView: 1.2, spaceBetween: 10, autoHeight: !0 },
+            320: { slidesPerView: 1.2, spaceBetween: 10 },
             768: { slidesPerView: 2.5, spaceBetween: 20 },
           },
           on: {},
