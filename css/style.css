@@ -560,7 +560,7 @@ body.popup-show::after {
   .menu__item:hover::before {
     background: url("../img/icons/arrow-dropmenu-hover.svg") center right/cover no-repeat;
   }
-  .menu__item:hover::after {
+  .menu__item:hover.drop-down::after {
     height: 2px;
     width: 101px;
     background-color: #0056fe;
