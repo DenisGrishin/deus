@@ -336,7 +336,7 @@
           for (let e = 0; e < s.length; e++) {
             s[e].style.paddingRight = "0px";
           }
-          const e = document.querySelector(".h");
+          const e = document.querySelector("._header-scroll");
           e && (e.style.paddingRight = "0px"),
             (t.style.paddingRight = "0px"),
             document.documentElement.classList.remove("lock");
@@ -758,7 +758,7 @@
       t ? i.matches(t) && s.push(i) : s.push(i), (i = i.parentElement);
     return s;
   }
-  function k(e, t, s) {
+  function _(e, t, s) {
     const i = f();
     return s
       ? e["width" === t ? "offsetWidth" : "offsetHeight"] +
@@ -776,7 +776,7 @@
           )
       : e.offsetWidth;
   }
-  function _(e) {
+  function k(e) {
     return (Array.isArray(e) ? e : [e]).filter((e) => !!e);
   }
   let O, I, z;
@@ -1146,7 +1146,7 @@
               o && (n.style.webkitTransform = "none"),
               s.roundLengths)
             )
-              L = e.isHorizontal() ? k(n, "width", !0) : k(n, "height", !0);
+              L = e.isHorizontal() ? _(n, "width", !0) : _(n, "height", !0);
             else {
               const e = t(r, "width"),
                 s = t(r, "padding-left"),
@@ -3740,7 +3740,7 @@
     }
     function a(e, s) {
       const i = t.params.navigation;
-      (e = _(e)).forEach((e) => {
+      (e = k(e)).forEach((e) => {
         e &&
           (e.classList[s ? "add" : "remove"](...i.disabledClass.split(" ")),
           "BUTTON" === e.tagName && (e.disabled = s),
@@ -3780,8 +3780,8 @@
       let s = r(e.nextEl),
         i = r(e.prevEl);
       Object.assign(t.navigation, { nextEl: s, prevEl: i }),
-        (s = _(s)),
-        (i = _(i));
+        (s = k(s)),
+        (i = k(i));
       const n = (s, i) => {
         s && s.addEventListener("click", "next" === i ? d : l),
           !t.enabled && s && s.classList.add(...e.lockClass.split(" "));
@@ -3790,7 +3790,7 @@
     }
     function p() {
       let { nextEl: e, prevEl: s } = t.navigation;
-      (e = _(e)), (s = _(s));
+      (e = k(e)), (s = k(s));
       const i = (e, s) => {
         e.removeEventListener("click", "next" === s ? d : l),
           e.classList.remove(...t.params.navigation.disabledClass.split(" "));
@@ -3820,8 +3820,8 @@
       }),
       i("enable disable", () => {
         let { nextEl: e, prevEl: s } = t.navigation;
-        (e = _(e)),
-          (s = _(s)),
+        (e = k(e)),
+          (s = k(s)),
           t.enabled
             ? o()
             : [...e, ...s]
@@ -3830,7 +3830,7 @@
       }),
       i("click", (e, s) => {
         let { nextEl: i, prevEl: r } = t.navigation;
-        (i = _(i)), (r = _(r));
+        (i = k(i)), (r = k(r));
         const a = s.target;
         let o = r.includes(a) || i.includes(a);
         if (t.isElement && !o) {
@@ -3956,7 +3956,7 @@
       let i,
         r,
         c = t.pagination.el;
-      c = _(c);
+      c = k(c);
       const p =
           t.virtual && t.params.virtual.enabled
             ? t.virtual.slides.length
@@ -3982,7 +3982,7 @@
         let l, p, u;
         if (
           (s.dynamicBullets &&
-            ((a = k(n[0], t.isHorizontal() ? "width" : "height", !0)),
+            ((a = _(n[0], t.isHorizontal() ? "width" : "height", !0)),
             c.forEach((e) => {
               e.style[t.isHorizontal() ? "width" : "height"] =
                 a * (s.dynamicMainBullets + 4) + "px";
@@ -4101,7 +4101,7 @@
             ? t.slides.length / Math.ceil(t.params.grid.rows)
             : t.slides.length;
       let i = t.pagination.el;
-      i = _(i);
+      i = k(i);
       let r = "";
       if ("bullets" === e.type) {
         let i = t.params.loop
@@ -4157,7 +4157,7 @@
               (s = s.filter((e) => A(e, ".swiper")[0] === t.el)[0])),
           Array.isArray(s) && 1 === s.length && (s = s[0]),
           Object.assign(t.pagination, { el: s }),
-          (s = _(s)),
+          (s = k(s)),
           s.forEach((s) => {
             "bullets" === e.type &&
               e.clickable &&
@@ -4183,7 +4183,7 @@
       if (l()) return;
       let s = t.pagination.el;
       s &&
-        ((s = _(s)),
+        ((s = k(s)),
         s.forEach((s) => {
           s.classList.remove(e.hiddenClass),
             s.classList.remove(e.modifierClass + e.type),
@@ -4203,7 +4203,7 @@
       if (!t.pagination || !t.pagination.el) return;
       const e = t.params.pagination;
       let { el: s } = t.pagination;
-      (s = _(s)),
+      (s = k(s)),
         s.forEach((s) => {
           s.classList.remove(e.horizontalClass, e.verticalClass),
             s.classList.add(
@@ -4229,7 +4229,7 @@
       i("enable disable", () => {
         let { el: e } = t.pagination;
         e &&
-          ((e = _(e)),
+          ((e = k(e)),
           e.forEach((e) =>
             e.classList[t.enabled ? "remove" : "add"](
               t.params.pagination.lockClass,
@@ -4241,7 +4241,7 @@
       }),
       i("click", (e, s) => {
         const i = s.target,
-          r = _(t.pagination.el);
+          r = k(t.pagination.el);
         if (
           t.params.pagination.el &&
           t.params.pagination.hideOnClick &&
@@ -4266,7 +4266,7 @@
       t.el.classList.add(t.params.pagination.paginationDisabledClass);
       let { el: e } = t.pagination;
       e &&
-        ((e = _(e)),
+        ((e = k(e)),
         e.forEach((e) =>
           e.classList.add(t.params.pagination.paginationDisabledClass),
         )),
@@ -4277,7 +4277,7 @@
         t.el.classList.remove(t.params.pagination.paginationDisabledClass);
         let { el: e } = t.pagination;
         e &&
-          ((e = _(e)),
+          ((e = k(e)),
           e.forEach((e) =>
             e.classList.remove(t.params.pagination.paginationDisabledClass),
           )),
