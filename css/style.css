@@ -653,7 +653,7 @@ body.popup-show::after {
   transition: all 0.3s ease 0s;
 }
 .menu-open .menu__body_tablet {
-  left: 15px;
+  left: 0px;
 }
 @media (max-width: 63.99875em) {
   .menu__body_tablet {
@@ -663,6 +663,7 @@ body.popup-show::after {
 
 .tablet-menu-burger {
   height: 100%;
+  padding-left: 15px;
 }
 .tablet-menu-burger__wrapper {
   height: 100%;
@@ -781,6 +782,10 @@ body.popup-show::after {
 
 ._header-scroll + .page {
   padding-top: 100px;
+}
+
+.menu-open ._header-scroll {
+  border-radius: 0;
 }
 
 .footer {

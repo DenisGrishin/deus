@@ -4621,7 +4621,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       !(function () {
         const e = document.querySelector(".drop-down");
-        window.addEventListener("click", function (t) {
+        document.addEventListener("click", function (t) {
           if (!t.target.closest(".drop-down__body"))
             return e.matches("._active")
               ? (document
@@ -4796,6 +4796,7 @@
       let n,
         r = 0;
       document.addEventListener("windowScroll", function (a) {
+        document.querySelector(".drop-down").classList.remove("_active");
         const o = window.scrollY;
         clearTimeout(n),
           o >= i
