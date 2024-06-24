@@ -166,7 +166,8 @@
         this.options.hashSettings.location &&
           (this._getHash(), this._setHash()),
           this.options.on.beforeOpen(this);
-        (document.querySelector(".header").style.paddingRight = "17px"),
+        const e = document.querySelector("._header-scroll");
+        e && (e.style.paddingRight = "17px"),
           this.targetOpen.element.classList.add(
             this.options.classes.popupActive,
           ),
@@ -335,7 +336,8 @@
           for (let e = 0; e < s.length; e++) {
             s[e].style.paddingRight = "0px";
           }
-          (document.querySelector(".header").style.paddingRight = "0px"),
+          const e = document.querySelector(".h");
+          e && (e.style.paddingRight = "0px"),
             (t.style.paddingRight = "0px"),
             document.documentElement.classList.remove("lock");
         }, e),
