@@ -887,12 +887,13 @@ body.popup-show::after {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  background-size: 0% 2px;
+  background-size: 0% 1px;
   transition: background-size 0.3s;
+  padding-bottom: 1px;
 }
 @media (any-hover: hover) {
   .footer__link-one:hover {
-    background-size: 100% 3px;
+    background-size: 100% 2px;
   }
 }
 @media (max-width: 85.37375em) {
@@ -990,6 +991,7 @@ body.popup-show::after {
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size 0.3s;
+  padding-bottom: 2px;
   text-wrap: nowrap;
   font-size: 1.25pxrem;
 }
